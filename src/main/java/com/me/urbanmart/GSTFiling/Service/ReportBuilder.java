@@ -18,8 +18,8 @@ public class ReportBuilder {
         // Consume Sheets to java Objects
        HashMap<String, Workbook> workbookHashMap =  utils.consumeSheets();
 
-       System.out.println(workbookHashMap);
-
+       //Remove Cancel shipment Coloumn
+       workbookHashMap = utils.sanititzeSheets(workbookHashMap);
     }
 
 

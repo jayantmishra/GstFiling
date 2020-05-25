@@ -1,6 +1,7 @@
 package com.me.urbanmart.GSTFiling.Utilities;
 
 import com.sun.corba.se.spi.orbutil.threadpool.Work;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.core.io.Resource;
@@ -44,6 +45,31 @@ public class Utils {
         }
 
         return stringWorkbookMap;
+
+    }
+
+    public HashMap<String, Workbook> sanititzeSheets(HashMap<String, Workbook> workbookHashMap) {
+
+        HashMap<String, Workbook> sanintizedMap = new HashMap<>();
+
+        for (Map.Entry<String, Workbook> element : workbookHashMap.entrySet()){
+
+            String key = (String) element.getKey();
+
+            Workbook workbook = workbookHashMap.get(key);
+
+            //Sanitizing this workbook and again putting it in Map
+            workbook = sanitizeWorkbook(workbook);
+        }
+
+
+    }
+
+    private Workbook sanitizeWorkbook(Workbook workbook) {
+
+        Sheet sheet = workbook.getSheetAt(0);
+
+
 
     }
 }
