@@ -1,5 +1,7 @@
 package com.me.urbanmart.GSTFiling.Config;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 /**
  * @author jaymishr
  */
@@ -29,6 +31,15 @@ public class AmazonConstants {
 
 
 
+    public static final int CANCELLED_ORDER_INDEX = 3;
+    public static final int STATE_COLUMN_INDEX =  24;
+    public static final int INVOICE_AMOUNT_INDEX = 27;
+    public static final int TAXABLE_AMOUNT_INDEX = 28;
+    public static final int TOTAL_TAX_INDEX = 29;
 
+    public static final int GST_CGST_INDEX= 30;
+    public static final int GST_SGST_INDEX = 31;
+    public static final int GST_UTGST_INDEX=32;
+    public static final int GST_IGST_INDEX = 33;
 
 }
